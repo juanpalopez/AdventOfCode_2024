@@ -1,6 +1,5 @@
 use std::fs::File;
-use std::io::{self, BufRead, Error};
-use std::path::Path;
+use std::io::{self, BufRead};
 
 pub fn read_by_line(file_name: &str) -> io::Result<io::Lines<io::BufReader<File>>> {
     let file = File::open(file_name)?;
